@@ -1,7 +1,7 @@
 '''
 In this program we are getting data from weather forecast site meteoprog.ua
 '''
-
+import re
 import requests
 from  bs4 import BeautifulSoup
 
@@ -23,8 +23,12 @@ date = [
 #Extracting short weather description:
 
 short_desc = [item.find('img').get('title') for item in weather_items]
-print(short_desc)
 
+min_temp  =  [re.sub(r'\s', '', item.find('span', {'class':'wwt_tmp wwt_min'}).find('span', class_ = None).get_text())  for item in weather_items]
+
+max_temp  =  [re.sub(r'\s', '', item.find('span', {'class':'wwt_tmp wwt_max'}).find('span', class_ = None).get_text())  for item in weather_items]
+print(max_temp)
+print(min_temp)
 
 
 
