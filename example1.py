@@ -1,5 +1,5 @@
 '''
-In this program we are getting data from weather forecast site meteoprog.ua
+In this program we are getting data from weather forecast site meteo.ua
 '''
 import re
 import requests
