@@ -1,2 +1,2 @@
 # Data-scraping
-Web scraping using Python package - Beautiful Soap.
+Web scraping using Python (Beautiful Soap, Scrapy)
